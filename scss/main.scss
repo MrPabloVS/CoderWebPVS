@@ -1,0 +1,194 @@
+@import "../bootstrap/scss/bootstrap";
+
+
+// Variables
+
+$Ppadding:2%;
+$FotoGridPadding:$Ppadding*1.5;  // usado en main__img--grid
+
+
+@function color($key: "blue") {
+  @return map-get($colors, $key);
+}
+
+@function theme-color($key: "gradiente") {
+  @return map-get($theme-colors, $key);
+}
+
+@function gray($key: "100") {
+  @return map-get($grays, $key);
+}
+
+
+
+// Bootstrap Map
+$theme-colors: (
+  "gradiente": radial-gradient(circle, rgba(255,243,80,1) 4%, rgba(199,145,0,1) 100%)
+);
+
+
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+	font-family:  'Antonio', sans-serif;
+}
+body{
+	background-color:#ffc107;
+}
+footer{
+	background: rgb(255,243,80);
+	background: radial-gradient(circle, rgba(255,243,80,1) 4%, rgba(199,145,0,1) 100%);
+	padding: 1%;
+	display: flex;
+	justify-content: space-between;
+	
+	
+}
+nav{
+	background: rgb(255,243,80);
+	background: radial-gradient(circle, rgba(255,243,80,1) 4%, rgba(199,145,0,1) 100%);
+	height:10vh;
+	margin-bottom: 10px;
+
+}
+
+ul li{
+	list-style-type: none;
+	text-decoration: none;
+	color: black;
+	display:inline-block;
+	margin-top:15px;
+	margin-left: 15px;
+}
+
+ul ul {
+   position: absolute;
+   display: none;
+}
+
+ul ul li {
+   display: block;
+}
+
+ul li:hover ul {
+   display:block;
+}
+
+fieldset{
+	background-color:#fff350
+	}
+
+
+.marginAuto{
+	margin:auto;
+}
+
+.simpleFlex{
+	display: flex;
+}
+
+.aside__Img{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.aside__img--Margin{
+	margin:10px;
+}
+
+.titulo{
+	margin:10px;
+}
+
+.marginLeft{
+	margin-left: 5px;
+}
+
+.main__img--grid{
+	display: inline-grid;
+	grid-template-columns: 400px 400px;
+	grid-template-rows: 400px 400px 400px 400px;
+	grid-column-gap: 20px;
+	grid-row: 20px;
+	padding:$FotoGridPadding;
+
+}
+
+.index--Display{
+	display: grid;
+}
+
+.main__img--rotate{
+		transform: rotate(90deg);
+		cursor: pointer;
+}
+
+
+@media only screen and (min-width: 768px){
+	.index--Display{ 
+		display: grid;
+		grid-template-areas: 
+			"text none"
+			"img1 img2"
+	}
+
+	.index__text--grid{
+		grid-area: text;
+	}
+
+	.index__Img1{
+		grid-area: img1;
+	}
+
+	.index__Img2{
+		grid-area: img2;
+	}
+
+
+}
+
+@media only screen and (min-width: 1080px){
+	.index--Display{ 
+		display: grid;
+		grid-template-areas: 
+			"text img1"
+	}
+
+	.index__text--grid{
+		grid-area:text;
+	}
+	
+} 
+
+
+
+// Puesto en SASS
+
+
+
+.padingGenerico{
+	padding: $Ppadding;
+}
+
+.aside__Img--Padding{
+	padding: $Ppadding - 1%;
+}
+
+.index__Article--paddingTop{
+	padding-top: $Ppadding/2;
+}
+
+.nav--responsiveBg{
+	background-color: red;
+}
+
+
+
+
+
+
+
+
