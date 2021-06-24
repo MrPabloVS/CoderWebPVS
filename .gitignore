@@ -1,3 +1,7 @@
 node_modules/
 *.jason
+<<<<<<< HEAD
 *.bmpr
+=======
+*.bmpr
+>>>>>>> b603b90b7b671823de0f5cac74dfab0f81c6f24c
